@@ -1,0 +1,1180 @@
+]0;root@08960cf3504d: /root@08960cf3504d:/# [K]0;root@08960cf3504d: /root@08960cf3504d:/# ls
+[0m[01;34mbin[0m   [01;34mdev[0m  [01;34mhome[0m  [01;34mlib64[0m  [01;34mmnt[0m  [01;34mproc[0m  [01;34mrun[0m   [01;34mshared[0m  [01;34msys[0m  [01;34musr[0m
+[01;34mboot[0m  [01;34metc[0m  [01;34mlib[0m   [01;34mmedia[0m  [01;34mopt[0m  [01;34mroot[0m  [01;34msbin[0m  [01;34msrv[0m     [30;42mtmp[0m  [01;34mvar[0m
+]0;root@08960cf3504d: /root@08960cf3504d:/# cd /shared
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg -help
+gpg (GnuPG) 1.4.20
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+
+Syntax: gpg [options] [files]
+Sign, check, encrypt or decrypt
+Default operation depends on the input data
+
+Commands:
+ 
+ -s, --sign [file]             make a signature
+     --clearsign [file]        make a clear text signature
+ -b, --detach-sign             make a detached signature
+ -e, --encrypt                 encrypt data
+ -c, --symmetric               encryption only with symmetric cipher
+ -d, --decrypt                 decrypt data (default)
+     --verify                  verify a signature
+     --list-keys               list keys
+     --list-sigs               list keys and signatures
+     --check-sigs              list and check key signatures
+     --fingerprint             list keys and fingerprints
+ -K, --list-secret-keys        list secret keys
+     --gen-key                 generate a new key pair
+     --delete-keys             remove keys from the public keyring
+     --delete-secret-keys      remove keys from the secret keyring
+     --sign-key                sign a key
+     --lsign-key               sign a key locally
+     --edit-key                sign or edit a key
+     --gen-revoke              generate a revocation certificate
+     --export                  export keys
+     --send-keys               export keys to a key server
+     --recv-keys               import keys from a key server
+     --search-keys             search for keys on a key server
+     --refresh-keys            update all keys from a keyserver
+     --import                  import/merge keys
+     --card-status             print the card status
+     --card-edit               change data on a card
+     --change-pin              change a card's PIN
+     --update-trustdb          update the trust database
+     --print-md algo [files]   print message digests
+
+Options:
+ 
+ -a, --armor                   create ascii armored output
+ -r, --recipient NAME          encrypt for NAME
+ -u, --local-user              use this user-id to sign or decrypt
+ -z N                          set compress level N (0 disables)
+     --textmode                use canonical text mode
+ -o, --output                  use as output file
+ -v, --verbose                 verbose
+ -n, --dry-run                 do not make any changes
+ -i, --interactive             prompt before overwriting
+     --openpgp                 use strict OpenPGP behavior
+     --pgp2                    generate PGP 2.x compatible messages
+
+(See the man page for a complete listing of all commands and options)
+
+Examples:
+
+ -se -r Bob [file]          sign and encrypt for user Bob
+ --clearsign [file]         make a clear text signature
+ --detach-sign [file]       make a detached signature
+ --list-keys [names]        show keys
+ --fingerprint [names]      show fingerprints
+
+Please report bugs to <gnupg-bugs@gnu.org>.
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# 
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg -gen-key
+gpg: Invalid option "-gen-key"
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --gen-key
+gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: directory `/root/.gnupg' created
+gpg: new configuration file `/root/.gnupg/gpg.conf' created
+gpg: WARNING: options in `/root/.gnupg/gpg.conf' are not yet active during this run
+gpg: keyring `/root/.gnupg/secring.gpg' created
+gpg: keyring `/root/.gnupg/pubring.gpg' created
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 
+Requested keysize is 2048 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 14w
+Key expires at Mon Jan  8 17:22:12 2018 UTC
+Is this correct? (y/N) y
+
+You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+Real name: Nick    Yinan
+gpg: Interrupt caught ... exiting
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --gen-key
+gpg (GnuPG) 1.4.20; Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (2048) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 14w
+Key expires at Mon Jan  8 17:22:54 2018 UTC
+Is this correct? (y/N) Yi  y
+
+You need a user ID to identify your key; the software constructs the user ID
+from the Real Name, Comment and Email Address in this form:
+    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+
+Real name: Yinan Gong
+Email address: gptt916@        n.gong@mail.utoronto.ca
+Comment: uOf   UofT
+You selected this USER-ID:
+    "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+You need a Passphrase to protect your secret key.
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   Repeat passphrase:                    We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+.+++++
+....+++++
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+......+++++
+..+++++
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key E5B1C3F3 marked as ultimately trusted
+public and secret key created and signed.
+
+gpg: checking the trustdb
+gpg: 3 marginal(s) needed, 1 complete(s) needed, PGP trust model
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: next trustdb check due at 2018-01-08
+pub   4096R/E5B1C3F3 2017-10-02 [expires: 2018-01-08]
+      Key fingerprint = 9D25 9447 3A9B 4FAC 811E  8460 DBD4 8ECC E5B1 C3F3
+uid                  Yinan Gong (UofT) <n.gong@mail.utoronto.ca>
+sub   4096R/03469550 2017-10-02 [expires: 2018-01-08]
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg--list-keys
+bash: gpg--list-keys: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --list-keys
+/root/.gnupg/pubring.gpg
+------------------------
+pub   4096R/E5B1C3F3 2017-10-02 [expires: 2018-01-08]
+uid                  Yinan Gong (UofT) <n.gong@mail.utoronto.ca>
+sub   4096R/03469550 2017-10-02 [expires: 2018-01-08]
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --list-keys-     secret-keys
+/root/.gnupg/secring.gpg
+------------------------
+sec   4096R/E5B1C3F3 2017-10-02 [expires: 2018-01-08]
+uid                  Yinan Gong (UofT) <n.gong@mail.utoronto.ca>
+ssb   4096R/03469550 2017-10-02
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --fingerprints            export --armor docker run -v $(pwd):/shared -it ubuntu ba sh[Aot@08960cf3504d:/shared# gpg --list-secret-keys[K
+[K[Aroot@08960cf3504d:/shared# gpg --list-secret-keys                 -export -armor E5B1C3F3
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+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
+p3Oee2T/OeNl1+hRARa+aS6/Z4lmAQ==
+=n4OG
+-----END PGP PUBLIC KEY BLOCK-----
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --export -armor E5B1C3F3[1@-
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+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
+p3Oee2T/OeNl1+hRARa+aS6/Z4lmAQ==
+=n4OG
+-----END PGP PUBLIC KEY BLOCK-----
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --export --armor E5B1C3F3[1@-[1@s[1@e[1@c[1@r[1@e[1@t[1@-[1@k[1@e[1@y[1@s --ar
+-----BEGIN PGP PRIVATE KEY BLOCK-----
+Version: GnuPG v1
+
+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
+vmkuv2eJZgE=
+=rgu6
+-----END PGP PRIVATE KEY BLOCK-----
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg --export-secret-keys --armor E5B1C3F3[KE5B1C3F3        gpg --fingerprint E5B1C3F3
+pub   4096R/E5B1C3F3 2017-10-02 [expires: 2018-01-08]
+      Key fingerprint = 9D25 9447 3A9B 4FAC 811E  8460 DBD4 8ECC E5B1 C3F3
+uid                  Yinan Gong (UofT) <n.gong@mail.utoronto.ca>
+sub   4096R/03469550 2017-10-02 [expires: 2018-01-08]
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --keyserver pgp.mit.edu --send-keys E5B1C3F3
+gpg: sending key E5B1C3F3 to hkp server pgp.mit.edu
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg --keyserver gpg.mit.edu --ser arch-keys thierry.sans@utoronto .ca[K[A]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --keyserver gpg.mit.edu --search-keys thierry.sans@u
+toronto.ca
+gpg: searching for "thierry.sans@utoronto.ca" from hkp server gpg.mit.edu
+?: gpg.mit.edu: Host not found
+gpgkeys: HTTP search error 7: couldn't connect: Success
+gpg: key "thierry.sans@utoronto.ca" not found on keyserver
+gpg: keyserver internal error
+gpg: keyserver search failed: keyserver error
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg --encrypt               echo hello! > te       o>  > test
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --encrypt --sign --armor --recipient gptt916       n.gong@mail.uto ronto.ca; test > msg.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   
+W 
+
+ç ^C
+gpg: Interrupt caught ... exiting
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kls
+[0m[01;32mencryptedAndSigned.txt[0m  [01;32msigned.txt[0m  test
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# cat test
+hello
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --encrypt --sign --armor --recipient gptt9      n  n.gong@mail.uto ronto.ca; test>msg.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   ^C
+gpg: Interrupt caught ... exiting
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg --encrypt --sign --armor --recipient n.gong@mail.utorronto.ca; test>msg.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   gpg: Invalid passphrase; please try again ...
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+Enter passphrase:                   gpg: Invalid passphrase; please try again ...
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+Enter passphrase:                   ^C
+gpg: Interrupt caught ... exiting
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg --keyserver pgp.mit.edu --search0 -keys g n.gong@mail.ut oronto.ca
+gpg: searching for "n.gong@mail.utoronto.ca" from hkp server pgp.mit.edu
+(1)	Yinan Gong (UofT) <n.gong@mail.utoronto.ca>
+	  4096 bit RSA key E5B1C3F3, created: 2017-10-02, expires: 2018-01-08
+Keys 1-1 of 1 for "n.gong@mail.utoronto.ca".  Enter number(s), N)ext, or Q)uit > 1
+gpg: requesting key E5B1C3F3 from hkp server pgp.mit.edu
+gpg: key E5B1C3F3: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg --keyserver pgp.mit.edu --search-keys n.gong@mail.utooronto.ca[A0cf3504d:/shared# gpg --encrypt --sign --armor --recipient n.gong@mail.utoronto.ca; test>msg.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   
+
+
+
+^C
+gpg: Interrupt caught ... exiting
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [K
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# 
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# ls
+[0m[01;32mencryptedAndSigned.txt[0m  [01;32msigned.txt[0m  test
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# cat test
+hello
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# cat testls[Kgpg --encrypt --sign --armor --recipient n.gong@mail.utorronto.ca; test>msg.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   ^C
+gpg: Interrupt caught ... exiting
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg  -agent --version
+bash: gpg-agent: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg -v -version
+gpg (GnuPG) 1.4.20
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg-agent
+bash: gpg-agent: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get
+apt 1.2.24 (amd64)
+Usage: apt-get [options] command
+       apt-get [options] install|remove pkg1 [pkg2 ...]
+       apt-get [options] source pkg1 [pkg2 ...]
+
+apt-get is a command line interface for retrieval of packages
+and information about them from authenticated sources and
+for installation, upgrade and removal of packages together
+with their dependencies.
+
+Most used commands:
+  update - Retrieve new lists of packages
+  upgrade - Perform an upgrade
+  install - Install new packages (pkg is libc6 not libc6.deb)
+  remove - Remove packages
+  purge - Remove packages and config files
+  autoremove - Remove automatically all unused packages
+  dist-upgrade - Distribution upgrade, see apt-get(8)
+  dselect-upgrade - Follow dselect selections
+  build-dep - Configure build-dependencies for source packages
+  clean - Erase downloaded archive files
+  autoclean - Erase old downloaded archive files
+  check - Verify that there are no broken dependencies
+  source - Download source archives
+  download - Download the binary package into the current directory
+  changelog - Download and display the changelog for the given package
+
+See apt-get(8) for more information about the available commands.
+Configuration options and syntax is detailed in apt.conf(5).
+Information about how to configure sources can be found in sources.list(5).
+Package and version choices can be expressed via apt_preferences(5).
+Security details are available in apt-secure(8).
+                                        This APT has Super Cow Powers.
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# sudo
+bash: sudo: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get a gpg-agent
+E: Invalid operation gpg-agent
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg-agent
+bash: gpg-agent: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg-agent --version
+bash: gpg-agent: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gnupu-agent
+bash: gnupu-agent: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get install gpg-agent
+Reading package lists... 0%Reading package lists... 0%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 2%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+E: Unable to locate package gpg-agent
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get install gnupg-agent
+Reading package lists... 0%Reading package lists... 0%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 2%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+E: Unable to locate package gnupg-agent
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get update
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu xenial InRelease [247 kB]
+0% [1 InRelease 0 B/247 kB 0%] [Connecting to security.ubuntu.com (91.189.88.149)]                                                                                  Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+                                                                                  0% [1 InRelease 100 kB/247 kB 41%] [2 InRelease 0 B/102 kB 0%]                                                              0% [2 InRelease 16.4 kB/102 kB 16%]0% [1 InRelease gpgv 247 kB] [Waiting for headers] [2 InRelease 16.4 kB/102 kB 16%                                                                                  0% [Waiting for headers] [2 InRelease 47.3 kB/102 kB 46%]                                                         Get:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+0% [3 InRelease 6145 B/102 kB 6%] [2 InRelease 53.8 kB/102 kB 53%]                                                                  0% [Waiting for headers] [2 InRelease 53.8 kB/102 kB 53%]0% [3 InRelease gpgv 102 kB] [Waiting for headers] [2 InRelease 53.8 kB/102 kB 53%                                                                                  Get:4 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+0% [3 InRelease gpgv 102 kB] [4 InRelease 993 B/102 kB 1%] [2 InRelease 73.1 kB/10                                                                                  0% [3 InRelease gpgv 102 kB] [2 InRelease 73.1 kB/102 kB 72%]                                                             Get:5 http://archive.ubuntu.com/ubuntu xenial/universe Sources [9802 kB]
+0% [3 InRelease gpgv 102 kB] [5 Sources 8805 B/9802 kB 0%] [2 InRelease 73.1 kB/10                                                                                  0% [5 Sources 46.4 kB/9802 kB 0%] [2 InRelease 74.4 kB/102 kB 73%]0% [4 InRelease gpgv 102 kB] [5 Sources 49.0 kB/9802 kB 0%] [2 InRelease 78.3 kB/1                                                                                  0% [5 Sources 133 kB/9802 kB 1%] [2 InRelease 95.0 kB/102 kB 93%]                                                                 0% [5 Sources 360 kB/9802 kB 4%]0% [2 InRelease gpgv 102 kB] [5 Sources 360 kB/9802 kB 4%]                                                          15% [5 Sources 570 kB/9802 kB 6%]                                 Get:6 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [50.4 kB]
+16% [5 Sources 869 kB/9802 kB 9%] [6 Sources 1081 B/50.4 kB 2%]                                                               19% [5 Sources 1636 kB/9802 kB 17%]19% [6 Sources store 0 B] [5 Sources 1643 kB/9802 kB 17%] [Waiting for headers]                                                                               19% [5 Sources 1647 kB/9802 kB 17%] [Waiting for headers]                                                         Get:7 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [454 kB]
+20% [5 Sources 1973 kB/9802 kB 20%] [7 Packages 1079 B/454 kB 0%]24% [5 Sources 3070 kB/9802 kB 31%] [7 Packages 73.2 kB/454 kB 16%]28% [5 Sources 4125 kB/9802 kB 42%] [7 Packages 73.2 kB/454 kB 16%]29% [5 Sources 4643 kB/9802 kB 47%] [7 Packages 74.5 kB/454 kB 16%]33% [5 Sources 5733 kB/9802 kB 58%] [7 Packages 77.1 kB/454 kB 17%]                                                                   36% [5 Sources 6623 kB/9802 kB 68%] [7 Packages 118 kB/454 kB 26%]40% [5 Sources 7705 kB/9802 kB 79%] [7 Packages 181 kB/454 kB 40%]44% [5 Sources 8869 kB/9802 kB 90%] [7 Packages 255 kB/454 kB 56%]                                                                  47% [Waiting for headers] [7 Packages 309 kB/454 kB 68%]                                                        Get:8 http://archive.ubuntu.com/ubuntu xenial/main amd64 Packages [1558 kB]
+47% [8 Packages 53.2 kB/1558 kB 3%] [7 Packages 309 kB/454 kB 68%]47% [5 Sources store 0 B] [8 Packages 53.2 kB/1558 kB 3%] [7 Packages 309 kB/454 k51% [5 Sources store 0 B] [8 Packages 1252 kB/1558 kB 80%] [7 Packages 399 kB/454 52% [5 Sources store 0 B] [7 Packages 415 kB/454 kB 91%]              1953 kB/s 6s                                                                                  Get:9 http://archive.ubuntu.com/ubuntu xenial/restricted amd64 Packages [14.1 kB]
+52% [5 Sources store 0 B] [9 Packages 0 B/14.1 kB 0%] [7 Packages 415 kB/454 kB 9152% [5 Sources store 0 B] [7 Packages 415 kB/454 kB 91%]              1953 kB/s 6s                                                                                  Get:10 http://archive.ubuntu.com/ubuntu xenial/universe amd64 Packages [9827 kB]
+52% [5 Sources store 0 B] [10 Packages 0 B/9827 kB 0%] [7 Packages 415 kB/454 kB 954% [10 Packages 310 kB/9827 kB 3%] [7 Packages 440 kB/454 kB 97%]    1953 kB/s 5s54% [8 Packages store 0 B] [10 Packages 310 kB/9827 kB 3%] [7 Packages 440 kB/454 55% [8 Packages store 0 B] [10 Packages 629 kB/9827 kB 6%]            1953 kB/s 5s                                                                                  Get:11 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.8 kB]
+55% [8 Packages store 0 B] [10 Packages 629 kB/9827 kB 6%] [11 Packages 5728 B/12.                                                                                  Get:12 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [213 kB]
+55% [8 Packages store 0 B] [10 Packages 632 kB/9827 kB 6%] [12 Packages 456 B/213 56% [10 Packages 632 kB/9827 kB 6%] [12 Packages 456 B/213 kB 0%]     1953 kB/s 5s56% [9 Packages store 0 B] [10 Packages 632 kB/9827 kB 6%] [12 Packages 456 B/213 56% [10 Packages 632 kB/9827 kB 6%] [12 Packages 456 B/213 kB 0%]     1953 kB/s 5s56% [7 Packages store 0 B] [10 Packages 632 kB/9827 kB 6%] [12 Packages 456 B/213 57% [10 Packages 786 kB/9827 kB 8%] [12 Packages 456 B/213 kB 0%]     1953 kB/s 5s57% [11 Packages store 0 B] [10 Packages 789 kB/9827 kB 8%] [12 Packages 456 B/21358% [10 Packages 805 kB/9827 kB 8%] [12 Packages 456 B/213 kB 0%]     1953 kB/s 5s                                                                                  62% [10 Packages 1957 kB/9827 kB 20%] [12 Packages 80.3 kB/213 kB 38%]                                                                      66% [10 Packages 3133 kB/9827 kB 32%] [12 Packages 165 kB/213 kB 78%]68% [10 Packages 3688 kB/9827 kB 38%] [Waiting for headers]           1953 kB/s 4s                                                                                  Get:13 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [2928 B]
+                                                                                  68% [10 Packages 3688 kB/9827 kB 38%] [13 Packages 1275 B/2928 B 44%]68% [12 Packages store 0 B] [10 Packages 3688 kB/9827 kB 38%] [13 Packages 1275 B/68% [12 Packages store 0 B] [10 Packages 3688 kB/9827 kB 38%]         1953 kB/s 4s68% [10 Packages 3709 kB/9827 kB 38%]                                 1953 kB/s 4s68% [13 Packages store 0 B] [10 Packages 3709 kB/9827 kB 38%]         1953 kB/s 4s69% [10 Packages 3709 kB/9827 kB 38%]                                 1953 kB/s 4s72% [10 Packages 4592 kB/9827 kB 47%]                                 1953 kB/s 3s76% [10 Packages 5767 kB/9827 kB 59%]                                 1953 kB/s 3s80% [10 Packages 7118 kB/9827 kB 72%]                                 1953 kB/s 2s84% [10 Packages 8299 kB/9827 kB 84%]                                 1953 kB/s 1s88% [10 Packages 9515 kB/9827 kB 97%]                                 1953 kB/s 1s89% [Working]                                                         1953 kB/s 0s89% [10 Packages store 0 B]                                           1953 kB/s 0s                                                                                  Get:14 http://archive.ubuntu.com/ubuntu xenial/multiverse amd64 Packages [176 kB]
+89% [10 Packages store 0 B] [14 Packages 0 B/176 kB 0%]               1953 kB/s 0s90% [10 Packages store 0 B]                                           1953 kB/s 0s                                                                                  Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [221 kB]
+90% [10 Packages store 0 B] [15 Sources 0 B/221 kB 0%]                1953 kB/s 0s90% [10 Packages store 0 B]                                           1953 kB/s 0s                                                                                  Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [821 kB]
+90% [10 Packages store 0 B] [16 Packages 0 B/821 kB 0%]               1953 kB/s 0s93% [10 Packages store 0 B]                                           1953 kB/s 0s                                                                                  Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.5 kB]
+93% [10 Packages store 0 B] [17 Packages 0 B/13.5 kB 0%]              1953 kB/s 0s93% [10 Packages store 0 B]                                           1953 kB/s 0s                                                                                  Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [689 kB]
+93% [10 Packages store 0 B] [18 Packages 0 B/689 kB 0%]               1953 kB/s 0s94% [18 Packages 81.0 kB/689 kB 12%]                                  1953 kB/s 0s94% [14 Packages store 0 B] [18 Packages 81.0 kB/689 kB 12%]          1953 kB/s 0s96% [18 Packages 475 kB/689 kB 69%]                                   1953 kB/s 0s96% [15 Sources store 0 B] [18 Packages 475 kB/689 kB 69%]            1953 kB/s 0s96% [18 Packages 537 kB/689 kB 78%]                                   1953 kB/s 0s96% [16 Packages store 0 B] [18 Packages 537 kB/689 kB 78%]           1953 kB/s 0s97% [18 Packages 671 kB/689 kB 97%]                                   1953 kB/s 0s97% [17 Packages store 0 B] [18 Packages 671 kB/689 kB 97%]           1953 kB/s 0s98% [18 Packages 677 kB/689 kB 98%]                                   1953 kB/s 0s98% [Working]                                                         1953 kB/s 0s98% [18 Packages store 0 B]                                           1953 kB/s 0s                                                                                  Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [17.5 kB]
+98% [18 Packages store 0 B] [19 Packages 0 B/17.5 kB 0%]              1953 kB/s 0s98% [18 Packages store 0 B] [Waiting for headers]                     1953 kB/s 0s                                                                                  Get:20 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [5176 B]
+98% [18 Packages store 0 B] [20 Packages 5176 B/5176 B 100%]          1953 kB/s 0s98% [18 Packages store 0 B] [Waiting for headers]                     1953 kB/s 0s                                                                                  Get:21 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [6354 B]
+98% [18 Packages store 0 B] [21 Packages 6354 B/6354 B 100%]          1953 kB/s 0s98% [18 Packages store 0 B]                                           1953 kB/s 0s98% [Working]                                                         1953 kB/s 0s98% [19 Packages store 0 B]                                           1953 kB/s 0s99% [Working]                                                         1953 kB/s 0s99% [20 Packages store 0 B]                                           1953 kB/s 0s99% [Working]                                                         1953 kB/s 0s99% [21 Packages store 0 B]                                           1953 kB/s 0s100% [Working]                                                        1953 kB/s 0s                                                                                  Fetched 24.4 MB in 11s (2103 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 83%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get install gnupg-agent
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 85%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libassuan0 libnpth0 pinentry-curses
+Suggested packages:
+  pinentry-doc
+The following NEW packages will be installed:
+  gnupg-agent libassuan0 libnpth0 pinentry-curses
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 312 kB of archives.
+After this operation, 1202 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libassuan0 amd64 2.4.2-2 [34.6 kB]
+0% [1 libassuan0 0 B/34.6 kB 0%]                                14% [Working]             Get:2 http://archive.ubuntu.com/ubuntu xenial/main amd64 pinentry-curses amd64 0.9.7-3 [31.2 kB]
+14% [2 pinentry-curses 0 B/31.2 kB 0%]                                      27% [Working]             Get:3 http://archive.ubuntu.com/ubuntu xenial/main amd64 libnpth0 amd64 1.2-3 [7998 B]
+27% [3 libnpth0 0 B/7998 B 0%]                              34% [Working]             Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 gnupg-agent amd64 2.1.11-6ubuntu2 [239 kB]
+34% [4 gnupg-agent 0 B/239 kB 0%]                                 100% [Working]              Fetched 312 kB in 0s (1199 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libassuan0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4768 files and directories currently installed.)
+Preparing to unpack .../libassuan0_2.4.2-2_amd64.deb ...
+Unpacking libassuan0:amd64 (2.4.2-2) ...
+Selecting previously unselected package pinentry-curses.
+Preparing to unpack .../pinentry-curses_0.9.7-3_amd64.deb ...
+Unpacking pinentry-curses (0.9.7-3) ...
+Selecting previously unselected package libnpth0:amd64.
+Preparing to unpack .../libnpth0_1.2-3_amd64.deb ...
+Unpacking libnpth0:amd64 (1.2-3) ...
+Selecting previously unselected package gnupg-agent.
+Preparing to unpack .../gnupg-agent_2.1.11-6ubuntu2_amd64.deb ...
+Unpacking gnupg-agent (2.1.11-6ubuntu2) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Setting up libassuan0:amd64 (2.4.2-2) ...
+Setting up pinentry-curses (0.9.7-3) ...
+Setting up libnpth0:amd64 (1.2-3) ...
+Setting up gnupg-agent (2.1.11-6ubuntu2) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg-agent
+gpg-agent[298]: no gpg-agent running in this session
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg-agent[18@apt-get install gnupg-agentupdate[Kinstall gnupg-agent[2Ppg-agent[14Pgnupu-agentpg-agent --version[K[8@apt-get gpg-agentsudo[Kapt-get[2@gpg-agent --version[6@-agent --version --encrypt --sign --armor --recipient n.gong@mail.utorronto.ca; test>msg.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase: 
+gpg: Interrupt caught ... exiting
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg-agent --version
+gpg-agent (GnuPG) 2.1.11
+libgcrypt 1.6.5
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --version
+gpg (GnuPG) 1.4.20
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg  -agent --version
+gpg-agent (GnuPG) 2.1.11
+libgcrypt 1.6.5
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg2 --version
+bash: gpg2: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get install gnupg2
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 11%Reading package lists... 80%Reading package lists... 80%Reading package lists... 81%Reading package lists... 81%Reading package lists... 81%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 32%Reading state information... Done
+The following additional packages will be installed:
+  dirmngr libasn1-8-heimdal libffi6 libgmp10 libgnutls30 libgssapi3-heimdal
+  libhcrypto4-heimdal libheimbase1-heimdal libheimntlm0-heimdal libhogweed4
+  libhx509-5-heimdal libidn11 libkrb5-26-heimdal libksba8 libldap-2.4-2
+  libnettle6 libp11-kit0 libroken18-heimdal libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6 libwind0-heimdal
+Suggested packages:
+  gnupg-doc parcimonie xloadimage gnutls-bin libsasl2-modules-otp
+  libsasl2-modules-ldap libsasl2-modules-sql libsasl2-modules-gssapi-mit
+  | libsasl2-modules-gssapi-heimdal
+The following NEW packages will be installed:
+  dirmngr gnupg2 libasn1-8-heimdal libffi6 libgmp10 libgnutls30
+  libgssapi3-heimdal libhcrypto4-heimdal libheimbase1-heimdal
+  libheimntlm0-heimdal libhogweed4 libhx509-5-heimdal libidn11 libkrb5-26-heimdal
+  libksba8 libldap-2.4-2 libnettle6 libp11-kit0 libroken18-heimdal libsasl2-2
+  libsasl2-modules libsasl2-modules-db libsqlite3-0 libssl1.0.0 libtasn1-6
+  libwind0-heimdal
+0 upgraded, 26 newly installed, 0 to remove and 0 not upgraded.
+Need to get 4857 kB of archives.
+After this operation, 14.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsqlite3-0 amd64 3.11.0-1ubuntu1 [396 kB]
+0% [1 libsqlite3-0 2293 B/396 kB 1%] [Connecting to security.ubuntu.com (91.189.88                                                                                  Get:2 http://security.ubuntu.com/ubuntu xenial-security/main amd64 libidn11 amd64 1.32-3ubuntu1.2 [46.5 kB]
+                                                                                  4% [1 libsqlite3-0 221 kB/396 kB 56%] [2 libidn11 2325 B/46.5 kB 5%]                                                                    8% [2 libidn11 38.4 kB/46.5 kB 83%]                                   Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libksba8 amd64 1.3.3-1ubuntu0.16.04.1 [90.2 kB]
+8% [3 libksba8 0 B/90.2 kB 0%] [2 libidn11 38.4 kB/46.5 kB 83%]                                                               10% [2 libidn11 38.4 kB/46.5 kB 83%]                                    Get:4 http://archive.ubuntu.com/ubuntu xenial/main amd64 gnupg2 amd64 2.1.11-6ubuntu2 [756 kB]
+10% [4 gnupg2 0 B/756 kB 0%] [2 libidn11 38.4 kB/46.5 kB 83%]                                                             14% [4 gnupg2 161 kB/756 kB 21%]                                24% [Waiting for headers]                         Get:5 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi6 amd64 3.2.1-4 [17.8 kB]
+24% [5 libffi6 1924 B/17.8 kB 11%]                                  25% [Working]             Get:6 http://archive.ubuntu.com/ubuntu xenial/main amd64 libgmp10 amd64 2:6.1.0+dfsg-2 [240 kB]
+25% [6 libgmp10 0 B/240 kB 0%]                              30% [Working]             Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libnettle6 amd64 3.2-1ubuntu0.16.04.1 [93.5 kB]
+30% [7 libnettle6 0 B/93.5 kB 0%]                                 32% [Waiting for headers]                         Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhogweed4 amd64 3.2-1ubuntu0.16.04.1 [136 kB]
+32% [8 libhogweed4 1234 B/136 kB 1%]                                    35% [Working]             Get:9 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libp11-kit0 amd64 0.23.2-5~ubuntu16.04.1 [105 kB]
+36% [9 libp11-kit0 9659 B/105 kB 9%]                                    38% [Waiting for headers]                         Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.2 [43.3 kB]
+39% [10 libtasn1-6 43.3 kB/43.3 kB 100%]                                        39% [Working]             Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgnutls30 amd64 3.4.10-4ubuntu1.3 [548 kB]
+40% [11 libgnutls30 19.4 kB/548 kB 4%]                                      49% [Waiting for headers]                         Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.8 [1081 kB]
+49% [12 libssl1.0.0 312 B/1081 kB 0%]                                     68% [Working]             Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libroken18-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [41.4 kB]
+68% [13 libroken18-heimdal 0 B/41.4 kB 0%]                                          69% [Working]             Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasn1-8-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [174 kB]
+69% [14 libasn1-8-heimdal 0 B/174 kB 0%]                                        73% [Waiting for headers]                         Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhcrypto4-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [85.0 kB]
+73% [15 libhcrypto4-heimdal 4586 B/85.0 kB 5%]                                              75% [Waiting for headers]                         Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimbase1-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [29.3 kB]
+75% [16 libheimbase1-heimdal 457 B/29.3 kB 2%]                                              76% [Working]             Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libwind0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [47.8 kB]
+76% [17 libwind0-heimdal 3118 B/47.8 kB 7%]                                           78% [Working]             Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libhx509-5-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [107 kB]
+78% [18 libhx509-5-heimdal 2645 B/107 kB 2%]                                            80% [Waiting for headers]                         Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkrb5-26-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [202 kB]
+80% [19 libkrb5-26-heimdal 3412 B/202 kB 2%]                                            84% [Waiting for headers]                         Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libheimntlm0-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [15.1 kB]
+84% [20 libheimntlm0-heimdal 897 B/15.1 kB 6%]                                              85% [Waiting for headers]                         Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgssapi3-heimdal amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1 [96.1 kB]
+85% [21 libgssapi3-heimdal 953 B/96.1 kB 1%]                                            88% [Waiting for headers]                         Get:22 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14build1 [14.5 kB]
+88% [22 libsasl2-modules-db 0 B/14.5 kB 0%]                                           89% [Waiting for headers]                         Get:23 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14build1 [48.7 kB]
+89% [23 libsasl2-2 13.4 kB/48.7 kB 28%]                                       90% [Waiting for headers]                         Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.2 [160 kB]
+90% [24 libldap-2.4-2 1810 B/160 kB 1%]                                       94% [Waiting for headers]                         Get:25 http://archive.ubuntu.com/ubuntu xenial/main amd64 libsasl2-modules amd64 2.1.26.dfsg1-14build1 [47.5 kB]
+94% [25 libsasl2-modules 2287 B/47.5 kB 5%]                                           95% [Waiting for headers]                         Get:26 http://archive.ubuntu.com/ubuntu xenial/main amd64 dirmngr amd64 2.1.11-6ubuntu2 [235 kB]
+95% [26 dirmngr 846 B/235 kB 0%]                                100% [Working]              Fetched 4857 kB in 2s (2190 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libsqlite3-0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4810 files and directories currently installed.)
+Preparing to unpack .../libsqlite3-0_3.11.0-1ubuntu1_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Setting up libsqlite3-0:amd64 (3.11.0-1ubuntu1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Selecting previously unselected package libksba8:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4816 files and directories currently installed.)
+Preparing to unpack .../libksba8_1.3.3-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libksba8:amd64 (1.3.3-1ubuntu0.16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Setting up libksba8:amd64 (1.3.3-1ubuntu0.16.04.1) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Selecting previously unselected package gnupg2.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4824 files and directories currently installed.)
+Preparing to unpack .../gnupg2_2.1.11-6ubuntu2_amd64.deb ...
+Unpacking gnupg2 (2.1.11-6ubuntu2) ...
+Setting up gnupg2 (2.1.11-6ubuntu2) ...
+Selecting previously unselected package libffi6:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4887 files and directories currently installed.)
+Preparing to unpack .../libffi6_3.2.1-4_amd64.deb ...
+Unpacking libffi6:amd64 (3.2.1-4) ...
+Selecting previously unselected package libgmp10:amd64.
+Preparing to unpack .../libgmp10_2%3a6.1.0+dfsg-2_amd64.deb ...
+Unpacking libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Selecting previously unselected package libnettle6:amd64.
+Preparing to unpack .../libnettle6_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libhogweed4:amd64.
+Preparing to unpack .../libhogweed4_3.2-1ubuntu0.16.04.1_amd64.deb ...
+Unpacking libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Selecting previously unselected package libidn11:amd64.
+Preparing to unpack .../libidn11_1.32-3ubuntu1.2_amd64.deb ...
+Unpacking libidn11:amd64 (1.32-3ubuntu1.2) ...
+Selecting previously unselected package libp11-kit0:amd64.
+Preparing to unpack .../libp11-kit0_0.23.2-5~ubuntu16.04.1_amd64.deb ...
+Unpacking libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Selecting previously unselected package libtasn1-6:amd64.
+Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.2_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.2) ...
+Selecting previously unselected package libgnutls30:amd64.
+Preparing to unpack .../libgnutls30_3.4.10-4ubuntu1.3_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.4.10-4ubuntu1.3) ...
+Selecting previously unselected package libssl1.0.0:amd64.
+Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.8_amd64.deb ...
+Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.8) ...
+Selecting previously unselected package libroken18-heimdal:amd64.
+Preparing to unpack .../libroken18-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libasn1-8-heimdal:amd64.
+Preparing to unpack .../libasn1-8-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhcrypto4-heimdal:amd64.
+Preparing to unpack .../libhcrypto4-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimbase1-heimdal:amd64.
+Preparing to unpack .../libheimbase1-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libwind0-heimdal:amd64.
+Preparing to unpack .../libwind0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libhx509-5-heimdal:amd64.
+Preparing to unpack .../libhx509-5-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libkrb5-26-heimdal:amd64.
+Preparing to unpack .../libkrb5-26-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libheimntlm0-heimdal:amd64.
+Preparing to unpack .../libheimntlm0-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libgssapi3-heimdal:amd64.
+Preparing to unpack .../libgssapi3-heimdal_1.7~git20150920+dfsg-4ubuntu1.16.04.1_amd64.deb ...
+Unpacking libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package libldap-2.4-2:amd64.
+Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.2_amd64.deb ...
+Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../libsasl2-modules_2.1.26.dfsg1-14build1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Selecting previously unselected package dirmngr.
+Preparing to unpack .../dirmngr_2.1.11-6ubuntu2_amd64.deb ...
+Unpacking dirmngr (2.1.11-6ubuntu2) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+Setting up libffi6:amd64 (3.2.1-4) ...
+Setting up libgmp10:amd64 (2:6.1.0+dfsg-2) ...
+Setting up libnettle6:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libhogweed4:amd64 (3.2-1ubuntu0.16.04.1) ...
+Setting up libidn11:amd64 (1.32-3ubuntu1.2) ...
+Setting up libp11-kit0:amd64 (0.23.2-5~ubuntu16.04.1) ...
+Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.2) ...
+Setting up libgnutls30:amd64 (3.4.10-4ubuntu1.3) ...
+Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.8) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.22.1 /usr/local/share/perl/5.22.1 /usr/lib/x86_64-linux-gnu/perl5/5.22 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.22 /usr/share/perl/5.22 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libroken18-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libasn1-8-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhcrypto4-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimbase1-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libwind0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libhx509-5-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libkrb5-26-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libheimntlm0-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libgssapi3-heimdal:amd64 (1.7~git20150920+dfsg-4ubuntu1.16.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.2) ...
+Setting up libsasl2-modules:amd64 (2.1.26.dfsg1-14build1) ...
+Setting up dirmngr (2.1.11-6ubuntu2) ...
+Processing triggers for libc-bin (2.23-0ubuntu9) ...
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# apt-get install gnupg2[Kgpg2 --version
+gpg (GnuPG) 2.1.11
+libgcrypt 1.6.5
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg-agent
+gpg-agent[615]: no gpg-agent running in this session
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg-agent --version
+gpg-agent (GnuPG) 2.1.11
+libgcrypt 1.6.5
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --version
+gpg (GnuPG) 1.4.20
+Copyright (C) 2015 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, RSA-E, RSA-S, ELG-E, DSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: MD5, SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg2 --version
+gpg (GnuPG) 2.1.11
+libgcrypt 1.6.5
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: ~/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg2 --version[Kgpg --encrypt --sign --armor --recp  cipient n.gong@mail.uto ronto.ca <;  msg.txt >msg.asc
+bash: msg.txt: No such file or directory
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kls
+[0m[01;32mencryptedAndSigned.txt[0m  [01;32msigned.txt[0m  test
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# lsgpg --encrypt --sign --armor --recipient n.gong@mail.utorronto.ca < msg.txt >msg.asct[1P[1P[1P[1P[1P[1P[1P[1@t[1@e[1@s[1@t
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   ]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kls
+[0m[01;32mencryptedAndSigned.txt[0m  msg.asc  [01;32msigned.txt[0m  test
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg < mg sg.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID 03469550, created 2017-10-02 (main key ID E5B1C3F3)
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   gpg: encrypted with 4096-bit RSA key, ID 03469550, created 2017-10-02
+      "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+hello
+gpg: Signature made Mon Oct  2 17:49:43 2017 UTC using RSA key ID E5B1C3F3
+gpg: Good signature from "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# ls
+[0m[01;32mencryptedAndSigned.txt[0m  msg.asc  [01;32msigned.txt[0m  test
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# rm -rf test
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# ls
+[0m[01;32mencryptedAndSigned.txt[0m  msg.asc  [01;32msigned.txt[0m
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --list  keys
+gpg: Invalid option "--listkeys"
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --list=keys     -ke  keys
+/root/.gnupg/pubring.gpg
+------------------------
+pub   4096R/E5B1C3F3 2017-10-02 [expires: 2018-01-08]
+uid                  Yinan Gong (UofT) <n.gong@mail.utoronto.ca>
+sub   4096R/03469550 2017-10-02 [expires: 2018-01-08]
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --export --armor E5B1C3F3
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+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
+p3Oee2T/OeNl1+hRARa+aS6/Z4lmAQ==
+=n4OG
+-----END PGP PUBLIC KEY BLOCK-----
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --export --armor E5B1C3F3 > key.asc
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg --fingerprint E5B1C3F3 > fingerprint.txt
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kcat signed.txt
+This message is not secret but you can be sure it is from me!]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# 
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --sign --armor --  < signed.txt >signed.asc  [1@-[1@-[1@r[1@e[1@c[1@i[1@p[1@i[1@e[1@n[1@t[1@ u< signed.txt >signed.asc [Aoot@08960cf3504d:/shared# gpg --sign --armor --recipient u[1P
+[K[Aroot@08960cf3504d:/shared# gpg --sign --armor --recipient t< signed.txt >signed.asc [Aoot@08960cf3504d:/shared# gpg --sign --armor --recipient th< signed.txt >signed.ascc[Aoot@08960cf3504d:/shared# gpg --sign --armor --recipient thi< signed.txt >signed.asc[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thie< signed.txt >signed.asc[At@08960cf3504d:/shared# gpg --sign --armor --recipient thier< signed.txt >signed.[1@a[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierr< signed.txt >signed[1@.[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry< signed.txt >signe[1@d[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.< signed.txt >sign[1@e[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.s< signed.txt >sig[1@n[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sa< signed.txt >si[1@g[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.san< signed.txt >s[1@i[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans< signed.txt >[1@s[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@< signed.txt [1@>[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@u< signed.txt[1@ [Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@ut< signed.tx[1@t[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@uto< signed.t[1@x[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utor< signed.[1@t[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoro< signed[1@.[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoron< signe[1@d[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoront< sign[1@e[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoronto< sig[1@n[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoronto.< si[1@g[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoronto.c< s[1@i[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoronto.ca< [1@s[Aot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoronto.ca
+
+gpg: WARNING: recipients (-r) given without using public key encryption
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   ]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kls
+[0m[01;32mencryptedAndSigned.txt[0m  fingerprint.txt  key.asc  msg.asc  signed.asc  [01;32msigned.txt[0m
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg   gpg < signed.asc
+This message is not secret but you can be sure it is from me!gpg: Signature made Mon Oct  2 17:56:55 2017 UTC using RSA key ID E5B1C3F3
+gpg: Good signature from "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# Wilbdhmnm1
+bash: Wilbdhmnm1: command not found
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# cat signed.
+cat: signed.: No such file or directory
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# cat signed.asc 
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owEBcwKM/ZANAwACAdvUjszlscPzActDYgBZ0n3nVGhpcyBtZXNzYWdlIGlzIG5v
+dCBzZWNyZXQgYnV0IHlvdSBjYW4gYmUgc3VyZSBpdCBpcyBmcm9tIG1lIYkCHAQA
+AQIABgUCWdJ95wAKCRDb1I7M5bHD81kOEACGv400mUDjhwcVNy9q0g+bI3B3tFTh
+z8wI8y1999e8HyKNIECIZcLnm6/sO3gfMVdJDSGcxRyu+lZrHWoyIo6spTEdco+j
+kfPv+TJdPaIU94QmTZfMc4EwtMPxZtCFLgt3u5UUlOfYY/P2rxJFITQllC1FHqtR
+bOsixts+ONh0DI/nX8+KS5Dk6fsksqq+33BOF4vIQ11Im5C1RR5uHCtfm6mMZMuv
+hIvogLghzcnI6K++bE2jUnbxauqly4uM0C3gLGTZ2R51ChEcFAzomurZ4Vwvy9+S
+no0fvxhb5bge668kd23/qCG4nJceG+OkI9Y7WopIHAFxc7/Ygfpdhz6zGDlwO6kl
+JEZ7Fyke98mXJojhIHyTAaJrQaIRoq6GQzV31+F8vkBehg9iZ+dPapO8QzVQq+gs
+YFzbI15LCTPjF9ma/YNnImYGHoRIaYH/pCvbkEEzqV5guTUtHv5GC+SEGp2WTjjm
+qAS0a2TG02h0wKnzJgirdSfk4Dzyqi76af7KR8iv7wzJxH3AfB9P8lD2/RG9cc91
+21gUcZk06T5EVNMFmhYMLjuzUUpH6hI/aCgG1+yY5HNSIyiFrPzPHB3yPJfIs8mG
+yP7XWxZ9wZbjT1OpMo+xmK7dEvgXBU4JC2d5thQMNLDYOd118nrZqEhL5Mslk6Zu
+ZxQFxTls7OszZw==
+=idPT
+-----END PGP MESSAGE-----
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# go  gpg --keyserver p pgp.mit.edu --search-keys the ierry.sans@u toronto.ca
+gpg: searching for "thierry.sans@utoronto.ca" from hkp server pgp.mit.edu
+(1)	Thierry Sans (UofT) <thierry.sans@utoronto.ca>
+	  2048 bit RSA key 331D549F, created: 2016-09-16
+Keys 1-1 of 1 for "thierry.sans@utoronto.ca".  Enter number(s), N)ext, or Q)uit > 1
+gpg: requesting key 331D549F from hkp server pgp.mit.edu
+gpg: key 331D549F: public key "Thierry Sans (UofT) <thierry.sans@utoronto.ca>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg - ls
+gpg: can't open `ls'
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# ls
+[0m[01;32mencryptedAndSigned.txt[0m  fingerprint.txt  key.asc  msg.asc  signed.asc  [01;32msigned.txt[0m
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# rm -rf signed.asc
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# ls
+[0m[01;32mencryptedAndSigned.txt[0m  fingerprint.txt  key.asc  msg.asc  [01;32msigned.txt[0m
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg -- sign -      -sign --armor --recipient thierry.sans@utoronto.ca  < signed.txt >signed.asc
+gpg: WARNING: recipients (-r) given without using public key encryption
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   ]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kgpg <M  signed.asc
+This message is not secret but you can be sure it is from me!gpg: Signature made Mon Oct  2 17:59:57 2017 UTC using RSA key ID E5B1C3F3
+gpg: Good signature from "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --list-keys
+/root/.gnupg/pubring.gpg
+------------------------
+pub   4096R/E5B1C3F3 2017-10-02 [expires: 2018-01-08]
+uid                  Yinan Gong (UofT) <n.gong@mail.utoronto.ca>
+sub   4096R/03469550 2017-10-02 [expires: 2018-01-08]
+
+pub   2048R/331D549F 2016-09-16
+uid                  Thierry Sans (UofT) <thierry.sans@utoronto.ca>
+sub   2048R/5CBCBFA6 2016-09-16
+
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg --list-keys< signed.asc--sign --armor --recipient thierry.sans@utoronto.ca << signed.txt >signed.asc[Aroot@08960cf3504d:/shared# gpg --sign --armor --recipient thierry.sans@utoronto.caa< signed.asc[K
+[K[Aroot@08960cf3504d:/shared# gpg < signed.asc[1P--list-keys[Kgpg --sign ==         --encrypt --sign --armor --a recipient thierry.sans@ut oronto.ca < encryptedAndSigned.txt >encryup  y ptedAndSigned.asc
+
+You need a passphrase to unlock the secret key for
+user: "Yinan Gong (UofT) <n.gong@mail.utoronto.ca>"
+4096-bit RSA key, ID E5B1C3F3, created 2017-10-02
+
+gpg: gpg-agent is not available in this session
+Enter passphrase:                   gpg: 5CBCBFA6: There is no assurance this key belongs to the named user
+
+pub  2048R/5CBCBFA6 2016-09-16 Thierry Sans (UofT) <thierry.sans@utoronto.ca>
+ Primary key fingerprint: E5EA 739C F3EF 6CA5 0DA3  A682 E9A2 04A8 331D 549F
+      Subkey fingerprint: 008A 705D 7285 5476 EAE1  3795 A39C E026 5CBC BFA6
+
+It is NOT certain that the key belongs to the person named
+in the user ID.  If you *really* know what you are doing,
+you may answer the next question with yes.
+
+Use this key anyway? (y/N) y
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# [Kls
+encryptedAndSigned.asc  fingerprint.txt  msg.asc     [0m[01;32msigned.txt[0m
+[01;32mencryptedAndSigned.txt[0m  key.asc          signed.asc
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# gpg < encryptedAndSigned.asc 
+gpg: encrypted with 2048-bit RSA key, ID 5CBCBFA6, created 2016-09-16
+      "Thierry Sans (UofT) <thierry.sans@utoronto.ca>"
+gpg: decryption failed: secret key not available
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# ls
+encryptedAndSigned.asc  fingerprint.txt  msg.asc     [0m[01;32msigned.txt[0m
+[01;32mencryptedAndSigned.txt[0m  key.asc          signed.asc
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# cat key.asc
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+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
+p3Oee2T/OeNl1+hRARa+aS6/Z4lmAQ==
+=n4OG
+-----END PGP PUBLIC KEY BLOCK-----
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# ^C
+]0;root@08960cf3504d: /sharedroot@08960cf3504d:/shared# cat key.ascls[Kcat key.ascls[Kcat key.asc[Kexit

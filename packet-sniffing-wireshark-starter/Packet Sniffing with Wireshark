@@ -1,0 +1,99 @@
+Packet Sniffing with Wireshark
+In the networking challenge, we are going to setup a virtual penetration testing environment. This setup will allow us to attack and defend virtual hosts without interfering with the real environment. Despite being virtual, this setup is technically similar to a real one, at least for the attack and defence techniques that we are going to consider here.
+
+In this challenge, our virtual penetration testing environment has three hosts connected on the same network:
+
+Alice (ip=10.0.0.2) is the innocent victim that we want to attack
+Mallory is the host that we will use to run our attacks
+the gateway that relays communication between the network and the rest of the internet
+As Mallory, our goal is to eavesdrop Alice's communication. We suspect that Alice sends login and password to a remote server over HTTP and/or HTTPS; and receives sensitive information back.
+
+We will run our attacks as if we were in a real environment. This means that:
+
+we do not have control over Alice's host
+we cannot modify the network setup
+Using Docker Compose
+To setup this virtual environment, we are going to use Docker and Docker Compose to build, configure and control a network of docker containers. As described previously, we are not allowed to modify (not even to read) this Docker setup.
+
+Building the docker images (first time only)
+To build all of these images at once, let's execute this command in the directory that contains the docker-compose.yml:
+
+$ docker-compose build
+As before, we only need to build these images once.
+
+Starting all containers
+Start all containers that will run in the background.
+
+$ docker-compose up -d
+Stopping and removing all containers
+Stop and remove all docker containers running in the background:
+
+$ docker-compose stop
+$ docker-compose rm
+If something goes wrong
+Remove all docker containers, networks and volumes (you can ignore the output):
+
+$ ./clean.sh
+Using Wireshark to sniff the network traffic
+From now on, we will exclusively act as Mallory. First, we are going sniff the network traffic (using tcpdump) and forward this traffic to Wireshark:
+
+$ docker exec mallory tcpdump -i eth0 -U -s 0 -w - | wireshark -k -i -
+Following a TCP Stream
+In this part, we will capture the Alice's communication. Alice's generate two types of traffic at the application layer: DNS and HTTP(s). For these two applications, there are two types of messages: the request (from the client to the server) and the response (from the server to the client). However, going down the network stack to the TCP layer, these messages are decomposed into several TCP message exchanges that we call the "TCP stream". The TCP stream can be divided into three parts:
+
+TCP 3-way handshake to initiate the communication
+
+|    | from   |  to    | protocol |  Info         |
+|----|:------:|:------:|:--------:|:-------------:|
+|  1 | client | server | TCP      | TCP SYN       |
+|  2 | server | client | TCP      | TCP SYN-ACK   |
+|  3 | client | server | TCP      | TCP ACK       |
+Data exchange
+
+|    | from   |  to    | protocol |  Info         |
+|----|:------:|:------:|:--------:|:-------------:|
+|  4 | client | server | HTTP     | HTTP request  |
+|  5 | server | client | TCP      | TCP ACK       |
+|  6 | server | client | HTTP     | HTTP response |
+|  7 | client | server | TCP      | TCP ACK       |
+TCP 4-way handshake to terminiate the communication
+
+|    | from   |  to    | protocol |  Info         |
+|----|:------:|:------:|:--------:|:-------------:|
+|  8 | client | server | TCP      | TCP FIN-ACK   |
+|  9 | server | client | TCP      | TCP ACK       |
+| 10 | server | client | TCP      | TCP FIN-ACK   |
+| 11 | client | server | TCP      | TCP ACK       |
+Since there are several TCP streams, we can isolate a particular TCP stream using Wireshark:
+
+select any message
+click right and select "Follow TCP Stream"
+After closing the modal window, you can see all TCP messages in this TCP stream.
+
+Exporting a TCP stream
+Once we have isolated a specific TCP stream, we can save it:
+
+select one of the packets in the TCP stream
+click right and select "Follow TCP Stream" (do not close the modal window this time)
+click on "Save As" and save the file
+as a verification step, open this file using any text editor and check that the right TCP stream was captured
+From this TCP stream, can Mallory see:
+
+which page Alice has been requested (HTTP request)?
+the HTML document returned by the server (HTTP response)?
+Eavesdropping Alice's communication
+Task 1: Eavesdrop the HTTP communication and isolate one TCP stream. Export this TCP stream as http.txt.
+
+Task 2: Eavesdrop the HTTPS communication and isolate one TCP stream. Export this TCP stream as https.txt.
+
+Task 3: Eavesdrop the DNS communication and isolate two disctint UDP streams, each of them requesting the IP resolution for a different canonical domain name. Export these two UDP streams as dns1.txt and dns2.txt.
+
+Task 4: Analyze all of these TCP/UDP streams and answer the following questions. Remember, to answer these questions, you should only rely on the information that Wireshark gives you. Write your answers in the answers.txt file given in the starter code. If you cannot answer a question, write none as your answer. Actually, you might not be able to answer some of these questions (yet), in this case none is the good answer.
+
+What is the canonical name (not the IP address) of the server that Alice communicates with over HTTP
+What is the canonical name (not the IP address) of the server that Alice communicates with over HTTPS
+What is Alice's password that she sends over HTTP
+What is Alice's password that she sends over HTTPS
+What is the secret flag (5 digit number only) that the server sends back to Alice over HTTP
+What is the secret flag (5 digit number only) that the server sends back to Alice over HTTPS
+Submit all of these files!
