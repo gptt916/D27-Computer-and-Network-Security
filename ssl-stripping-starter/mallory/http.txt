@@ -1,0 +1,16 @@
+POST / HTTP/1.1
+host: https-only.seclab.space
+content-type: application/x-www-form-urlencoded
+content-length: 30
+Connection: close
+
+username=alice&password=h4x00rHTTP/1.1 200 OK
+Content-Length: 39
+X-Powered-By: PHP/7.0.24
+Strict-Transport-Security: max-age=31536000
+Server: nginx
+Connection: close
+Date: Tue, 07 Nov 2017 02:39:30 GMT
+Content-Type: text/html; charset=UTF-8
+
+Welcome alice your secret flag is 28563

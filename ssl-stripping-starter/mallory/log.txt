@@ -1,0 +1,266 @@
+2017-11-08 01:10:53,984 Resolving host: https-only.seclab.space
+2017-11-08 01:10:53,985 Host not cached.
+2017-11-08 01:10:54,525 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:10:54,526 Sending request via HTTP...
+2017-11-08 01:10:54,541 HTTP connection made.
+2017-11-08 01:10:54,542 Sending Request: GET /
+2017-11-08 01:10:54,542 Sending header: host : https-only.seclab.space
+2017-11-08 01:10:54,543 Sending header: connection : close
+2017-11-08 01:10:54,562 Got server response: HTTP/1.1 301 Moved Permanently
+2017-11-08 01:10:54,562 Got server header: Server:nginx/1.13.5
+2017-11-08 01:10:54,563 Got server header: Date:Wed, 08 Nov 2017 01:10:53 GMT
+2017-11-08 01:10:54,563 Got server header: Content-Type:text/html
+2017-11-08 01:10:54,564 Got server header: Content-Length:185
+2017-11-08 01:10:54,564 Got server header: Connection:close
+2017-11-08 01:10:54,565 Got server header: Location:https://https-only.seclab.space/
+2017-11-08 01:10:54,566 Found secure reference: https://https-only.seclab.space/
+2017-11-08 01:10:54,566 Read from server:
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body bgcolor="white">
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.13.5</center>
+</body>
+</html>
+
+2017-11-08 01:10:54,573 Resolving host: https-only.seclab.space
+2017-11-08 01:10:54,573 Host cached.
+2017-11-08 01:10:54,574 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:10:54,575 Sending request via SSL...
+2017-11-08 01:10:54,592 HTTP connection made.
+2017-11-08 01:10:54,593 Sending Request: GET /
+2017-11-08 01:10:54,593 Sending header: host : https-only.seclab.space
+2017-11-08 01:10:54,594 Sending header: referer : http://https-only.seclab.space/
+2017-11-08 01:10:54,594 Sending header: connection : close
+2017-11-08 01:10:54,662 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:10:54,663 Got server header: Server:nginx
+2017-11-08 01:10:54,664 Got server header: Date:Wed, 08 Nov 2017 01:10:53 GMT
+2017-11-08 01:10:54,664 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:10:54,665 Got server header: Content-Length:32
+2017-11-08 01:10:54,665 Got server header: Connection:close
+2017-11-08 01:10:54,666 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:10:54,667 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:10:54,667 Read from server:
+Welcome to the https-only server
+2017-11-08 01:10:54,675 Resolving host: https-only.seclab.space
+2017-11-08 01:10:54,675 Host cached.
+2017-11-08 01:10:54,676 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:10:54,676 Sending request via SSL...
+2017-11-08 01:10:54,692 HTTP connection made.
+2017-11-08 01:10:54,693 Sending Request: POST /
+2017-11-08 01:10:54,693 Sending header: connection : close
+2017-11-08 01:10:54,694 Sending header: content-type : application/x-www-form-urlencoded
+2017-11-08 01:10:54,694 Sending header: host : https-only.seclab.space
+2017-11-08 01:10:54,695 Sending header: content-length : 30
+2017-11-08 01:10:54,695 SECURE POST Data (https-only.seclab.space):
+username=alice&password=h4x00r
+2017-11-08 01:10:54,771 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:10:54,771 Got server header: Server:nginx
+2017-11-08 01:10:54,772 Got server header: Date:Wed, 08 Nov 2017 01:10:53 GMT
+2017-11-08 01:10:54,772 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:10:54,773 Got server header: Content-Length:39
+2017-11-08 01:10:54,773 Got server header: Connection:close
+2017-11-08 01:10:54,774 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:10:54,774 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:10:54,775 Read from server:
+Welcome alice your secret flag is 28563
+2017-11-08 01:10:59,989 Resolving host: https-only.seclab.space
+2017-11-08 01:10:59,990 Host cached.
+2017-11-08 01:10:59,991 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:10:59,991 Sending request via SSL...
+2017-11-08 01:11:00,010 HTTP connection made.
+2017-11-08 01:11:00,011 Sending Request: GET /
+2017-11-08 01:11:00,011 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:00,012 Sending header: connection : close
+2017-11-08 01:11:00,084 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:00,085 Got server header: Server:nginx
+2017-11-08 01:11:00,085 Got server header: Date:Wed, 08 Nov 2017 01:10:58 GMT
+2017-11-08 01:11:00,086 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:00,086 Got server header: Content-Length:32
+2017-11-08 01:11:00,087 Got server header: Connection:close
+2017-11-08 01:11:00,088 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:00,088 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:00,089 Read from server:
+Welcome to the https-only server
+2017-11-08 01:11:00,098 Resolving host: https-only.seclab.space
+2017-11-08 01:11:00,099 Host cached.
+2017-11-08 01:11:00,099 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:00,100 Sending request via SSL...
+2017-11-08 01:11:00,115 HTTP connection made.
+2017-11-08 01:11:00,116 Sending Request: POST /
+2017-11-08 01:11:00,116 Sending header: connection : close
+2017-11-08 01:11:00,117 Sending header: content-type : application/x-www-form-urlencoded
+2017-11-08 01:11:00,117 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:00,117 Sending header: content-length : 30
+2017-11-08 01:11:00,118 SECURE POST Data (https-only.seclab.space):
+username=alice&password=h4x00r
+2017-11-08 01:11:00,194 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:00,195 Got server header: Server:nginx
+2017-11-08 01:11:00,196 Got server header: Date:Wed, 08 Nov 2017 01:10:58 GMT
+2017-11-08 01:11:00,196 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:00,197 Got server header: Content-Length:39
+2017-11-08 01:11:00,197 Got server header: Connection:close
+2017-11-08 01:11:00,198 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:00,198 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:00,199 Read from server:
+Welcome alice your secret flag is 28563
+2017-11-08 01:11:02,993 Resolving host: https-only.seclab.space
+2017-11-08 01:11:02,994 Host cached.
+2017-11-08 01:11:02,994 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:02,995 Sending request via SSL...
+2017-11-08 01:11:03,013 HTTP connection made.
+2017-11-08 01:11:03,014 Sending Request: GET /
+2017-11-08 01:11:03,014 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:03,015 Sending header: connection : close
+2017-11-08 01:11:03,083 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:03,084 Got server header: Server:nginx
+2017-11-08 01:11:03,085 Got server header: Date:Wed, 08 Nov 2017 01:11:01 GMT
+2017-11-08 01:11:03,086 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:03,086 Got server header: Content-Length:32
+2017-11-08 01:11:03,087 Got server header: Connection:close
+2017-11-08 01:11:03,087 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:03,088 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:03,088 Read from server:
+Welcome to the https-only server
+2017-11-08 01:11:03,095 Resolving host: https-only.seclab.space
+2017-11-08 01:11:03,095 Host cached.
+2017-11-08 01:11:03,096 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:03,096 Sending request via SSL...
+2017-11-08 01:11:03,119 HTTP connection made.
+2017-11-08 01:11:03,120 Sending Request: POST /
+2017-11-08 01:11:03,121 Sending header: connection : close
+2017-11-08 01:11:03,121 Sending header: content-type : application/x-www-form-urlencoded
+2017-11-08 01:11:03,122 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:03,122 Sending header: content-length : 30
+2017-11-08 01:11:03,123 SECURE POST Data (https-only.seclab.space):
+username=alice&password=h4x00r
+2017-11-08 01:11:03,204 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:03,205 Got server header: Server:nginx
+2017-11-08 01:11:03,205 Got server header: Date:Wed, 08 Nov 2017 01:11:01 GMT
+2017-11-08 01:11:03,206 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:03,207 Got server header: Content-Length:39
+2017-11-08 01:11:03,207 Got server header: Connection:close
+2017-11-08 01:11:03,208 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:03,208 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:03,209 Read from server:
+Welcome alice your secret flag is 28563
+2017-11-08 01:11:05,998 Resolving host: https-only.seclab.space
+2017-11-08 01:11:05,999 Host cached.
+2017-11-08 01:11:05,999 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:06,000 Sending request via SSL...
+2017-11-08 01:11:06,014 HTTP connection made.
+2017-11-08 01:11:06,015 Sending Request: GET /
+2017-11-08 01:11:06,016 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:06,017 Sending header: connection : close
+2017-11-08 01:11:06,091 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:06,093 Got server header: Server:nginx
+2017-11-08 01:11:06,093 Got server header: Date:Wed, 08 Nov 2017 01:11:04 GMT
+2017-11-08 01:11:06,094 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:06,095 Got server header: Content-Length:32
+2017-11-08 01:11:06,095 Got server header: Connection:close
+2017-11-08 01:11:06,095 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:06,096 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:06,096 Read from server:
+Welcome to the https-only server
+2017-11-08 01:11:06,104 Resolving host: https-only.seclab.space
+2017-11-08 01:11:06,104 Host cached.
+2017-11-08 01:11:06,105 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:06,105 Sending request via SSL...
+2017-11-08 01:11:06,121 HTTP connection made.
+2017-11-08 01:11:06,122 Sending Request: POST /
+2017-11-08 01:11:06,122 Sending header: connection : close
+2017-11-08 01:11:06,123 Sending header: content-type : application/x-www-form-urlencoded
+2017-11-08 01:11:06,123 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:06,124 Sending header: content-length : 30
+2017-11-08 01:11:06,125 SECURE POST Data (https-only.seclab.space):
+username=alice&password=h4x00r
+2017-11-08 01:11:06,196 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:06,197 Got server header: Server:nginx
+2017-11-08 01:11:06,198 Got server header: Date:Wed, 08 Nov 2017 01:11:04 GMT
+2017-11-08 01:11:06,198 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:06,199 Got server header: Content-Length:39
+2017-11-08 01:11:06,199 Got server header: Connection:close
+2017-11-08 01:11:06,200 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:06,201 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:06,202 Read from server:
+Welcome alice your secret flag is 28563
+2017-11-08 01:11:09,003 Resolving host: https-only.seclab.space
+2017-11-08 01:11:09,004 Host cached.
+2017-11-08 01:11:09,004 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:09,005 Sending request via SSL...
+2017-11-08 01:11:09,024 HTTP connection made.
+2017-11-08 01:11:09,025 Sending Request: GET /
+2017-11-08 01:11:09,025 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:09,026 Sending header: connection : close
+2017-11-08 01:11:09,096 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:09,097 Got server header: Server:nginx
+2017-11-08 01:11:09,098 Got server header: Date:Wed, 08 Nov 2017 01:11:07 GMT
+2017-11-08 01:11:09,098 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:09,099 Got server header: Content-Length:32
+2017-11-08 01:11:09,099 Got server header: Connection:close
+2017-11-08 01:11:09,100 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:09,100 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:09,101 Read from server:
+Welcome to the https-only server
+2017-11-08 01:11:09,108 Resolving host: https-only.seclab.space
+2017-11-08 01:11:09,109 Host cached.
+2017-11-08 01:11:09,109 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:09,109 Sending request via SSL...
+2017-11-08 01:11:09,123 HTTP connection made.
+2017-11-08 01:11:09,124 Sending Request: POST /
+2017-11-08 01:11:09,124 Sending header: connection : close
+2017-11-08 01:11:09,124 Sending header: content-type : application/x-www-form-urlencoded
+2017-11-08 01:11:09,125 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:09,125 Sending header: content-length : 30
+2017-11-08 01:11:09,125 SECURE POST Data (https-only.seclab.space):
+username=alice&password=h4x00r
+2017-11-08 01:11:09,203 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:09,203 Got server header: Server:nginx
+2017-11-08 01:11:09,204 Got server header: Date:Wed, 08 Nov 2017 01:11:07 GMT
+2017-11-08 01:11:09,205 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:09,205 Got server header: Content-Length:39
+2017-11-08 01:11:09,206 Got server header: Connection:close
+2017-11-08 01:11:09,206 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:09,206 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:09,207 Read from server:
+Welcome alice your secret flag is 28563
+2017-11-08 01:11:12,003 Resolving host: https-only.seclab.space
+2017-11-08 01:11:12,004 Host cached.
+2017-11-08 01:11:12,004 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:12,005 Sending request via SSL...
+2017-11-08 01:11:12,023 HTTP connection made.
+2017-11-08 01:11:12,024 Sending Request: GET /
+2017-11-08 01:11:12,024 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:12,025 Sending header: connection : close
+2017-11-08 01:11:12,098 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:12,098 Got server header: Server:nginx
+2017-11-08 01:11:12,099 Got server header: Date:Wed, 08 Nov 2017 01:11:10 GMT
+2017-11-08 01:11:12,099 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:12,100 Got server header: Content-Length:32
+2017-11-08 01:11:12,100 Got server header: Connection:close
+2017-11-08 01:11:12,101 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:12,101 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:12,102 Read from server:
+Welcome to the https-only server
+2017-11-08 01:11:12,109 Resolving host: https-only.seclab.space
+2017-11-08 01:11:12,110 Host cached.
+2017-11-08 01:11:12,111 Resolved host successfully: https-only.seclab.space -> 142.1.97.172
+2017-11-08 01:11:12,111 Sending request via SSL...
+2017-11-08 01:11:12,129 HTTP connection made.
+2017-11-08 01:11:12,130 Sending Request: POST /
+2017-11-08 01:11:12,131 Sending header: connection : close
+2017-11-08 01:11:12,131 Sending header: content-type : application/x-www-form-urlencoded
+2017-11-08 01:11:12,132 Sending header: host : https-only.seclab.space
+2017-11-08 01:11:12,132 Sending header: content-length : 30
+2017-11-08 01:11:12,132 SECURE POST Data (https-only.seclab.space):
+username=alice&password=h4x00r
+2017-11-08 01:11:12,209 Got server response: HTTP/1.1 200 OK
+2017-11-08 01:11:12,210 Got server header: Server:nginx
+2017-11-08 01:11:12,211 Got server header: Date:Wed, 08 Nov 2017 01:11:10 GMT
+2017-11-08 01:11:12,211 Got server header: Content-Type:text/html; charset=UTF-8
+2017-11-08 01:11:12,211 Got server header: Content-Length:39
+2017-11-08 01:11:12,212 Got server header: Connection:close
+2017-11-08 01:11:12,212 Got server header: X-Powered-By:PHP/7.0.24
+2017-11-08 01:11:12,213 Got server header: Strict-Transport-Security:max-age=31536000
+2017-11-08 01:11:12,213 Read from server:
+Welcome alice your secret flag is 28563
